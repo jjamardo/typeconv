@@ -1,5 +1,5 @@
 # typeconv
-A C++98 type converter using "any types"
+A simple C++98 types converter using "any types"
 
 This use the an implementation of the boost:any type for c++98
 (see https://github.com/jjamardo/any).
@@ -8,6 +8,19 @@ Using any, C style callbacks and dynamic type info (type_info), user can write
 functions to convert between types.
 
 ## Use
+
+* First add a convertion function for the specific type.
+
+```c++
+void add_conv(const std::type_info& t, any (* func)(any&))
+```
+
+* Then use the convert function, and for each type added the specific
+conversion function will be called.
+
+```c++
+any convert(const T& t)
+```
 
 ```c++
 class person
