@@ -1,15 +1,9 @@
-# typeconv
-A C++98 type converter using "any types"
+#include "typeconv.hpp"
+#include <string>
+#include <sstream>
+#include <stdint.h>
+#include <iostream>
 
-This use the an implementation of the boost:any type for c++98
-(see https://github.com/jjamardo/any).
-
-Using any, C style callbacks and dynamic type info (type_info), user can write
-functions to convert between types.
-
-## Use
-
-```c++
 class person
 {
 	public:
@@ -79,4 +73,3 @@ int main(void)
 	person p("Pedro Navaja", 83);
 	std::cout << any::as<std::string>(c.convert(p)) << std::endl;
 }
-```
