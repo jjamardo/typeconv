@@ -1,7 +1,7 @@
 # typeconv
 A simple C++98 types converter using "any types"
 
-This use the an implementation of the boost:any type for c++98
+This use an implementation of the boost:any type for c++98
 (see https://github.com/jjamardo/any).
 
 Using any, C style callbacks and dynamic type info (type_info), user can write
