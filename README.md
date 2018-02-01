@@ -9,7 +9,7 @@ functions to convert between types.
 
 ## Use
 
-* First add a convertion function for the specific type.
+* First add a conversion function for the specific type.
 
 ```c++
 void add_conv(const std::type_info& t, any (* func)(any&))
